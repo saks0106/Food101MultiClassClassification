@@ -30,7 +30,7 @@ st.subheader('Please upload an image of a Dish🥣 you want to predict🤔 or pa
 
 st.info('This Web Application has been Trained 50k+ Image Dataset and it can classify 101 Food Images :100:')
 st.warning(' Kindly Upload the Correct Link and Correct Image for Best Results! 🤔',icon='✅')
-st.warning('Please wait Patiently while is Running :running:')
+st.warning('Please wait Patiently while the model :robot_face: is Running :running:')
 
 img_select = st.radio('Select Any from Below Options:',
                   options =('Upload an Image', 'Choose from Existing Images','Paste a Link'))
