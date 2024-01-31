@@ -42,7 +42,7 @@ if img_select == 'Upload an Image':
     model.image_display(file)
 
 elif img_select == 'Choose from Existing Images':
-    folder_dir = "C:/Users/acer/PycharmProjects/Food101MultiClassClassification/"
+    folder_dir = "./images/"
     img_select = st.radio('Select Any of the Food Dishes Below:',
                           options=('','burger.jpg', 'butter_chicken.jpg', 'pizza.jpg'),index=0)
     if img_select == '':
@@ -76,6 +76,7 @@ else:
 
         # Example usage
         image_url = st.text_area('Enter Image URL: ', max_chars=1000, placeholder='sample txt')
+        st.warning(' Kindly Upload the Correct and Valid Link for Best Results! 🤔',icon='✅')
         if st.button('Upload Url for Image'):
             image = open_image_from_url(image_url)
             model.image_display_url(image)

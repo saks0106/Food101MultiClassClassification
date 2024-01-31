@@ -26,7 +26,7 @@ class Model:
 
     def streamlit_clf(self, image):
         # load class names
-        with open('./model/labels.txt', 'r') as f:
+        with open('labels.txt', 'r') as f:
             class_names = [a.rstrip() for a in f.readlines()]
             f.close()
 
