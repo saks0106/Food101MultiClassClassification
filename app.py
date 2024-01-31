@@ -77,7 +77,7 @@ else:
         # Example usage
         image_url = st.text_area('Enter Image URL: ', max_chars=1000, placeholder='sample txt')
         st.warning(' Kindly Upload the Correct and Valid Link for Best Results! 🤔',icon='✅')
-        if st.button('Upload Url for Image'):
+        if st.button('Upload Valid Image Address/Url'):
             image = open_image_from_url(image_url)
             model.image_display_url(image)
 
