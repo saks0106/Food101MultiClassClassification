@@ -36,6 +36,7 @@ class Model:
             pred_class = class_names[pred_prob.argmax()]  # find the predicted class label with highest probability
             st.write('#')
             pred_prob = pred_prob.max() * 100
+
             st.write(f"# Model Thinks the Dish is {pred_class} 🍲 with Confidence level of {pred_prob:.2f}% 😋😄 ")
             st.markdown('#')
             time.sleep(0.5)
