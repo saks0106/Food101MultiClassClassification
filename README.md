@@ -1,5 +1,7 @@
 
-# Multiclass Classification for 101 Food Categories : App Link https://saks0106-food101multiclassclassification-app-k4q9ai.streamlit.app/
+# Multiclass Classification for 101 Food Categories : 
+
+# App Link https://saks0106-food101multiclassclassification-app-k4q9ai.streamlit.app/
 
 This project focuses on multiclass classification for a diverse set of 101 food categories. The goal is to develop a robust machine learning model that can accurately classify images into one of the predefined food categories. This README file provides essential information to understand and contribute to the project.
 
@@ -110,7 +112,7 @@ This project focuses on multiclass classification for a diverse set of 101 food 
     101. waffles
 
 
-Hungry Right! Try the Streamlit App: [Food101](https://choosealicense.com/licenses/mit/)
+Hungry Right! Try the Streamlit App: [Food101](https://saks0106-food101multiclassclassification-app-k4q9ai.streamlit.app/)
 
 ## Project Description:
 
@@ -321,6 +323,7 @@ Demo of our wrong predictions:
 ![](https://raw.githubusercontent.com/saks0106/Food101MultiClassClassification/main/Explaination_ScreenShots/Wrong_Preds.png)
 
 
+App Link: https://saks0106-food101multiclassclassification-app-k4q9ai.streamlit.app/
 
 
 ## CONTRIBUTIONS
