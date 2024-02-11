@@ -24,6 +24,7 @@ st.set_page_config(page_title='Food101',
 
 # set title
 st.title('Welcome to Food101 MultiClass Classification ! :100:🥘🥙😋',anchor='xyz')
+st.image('./Explaination_ScreenShots/Cover.png')
 
 st.write("#")
 st.subheader('Please upload an image of a Dish🥣 you want to predict🤔 or paste an Image Url 🔗 or Choose from Existing Images 🥩 ')
