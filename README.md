@@ -110,7 +110,7 @@ This project focuses on multiclass classification for a diverse set of 101 food 
     101. waffles
 
 
-Hungry Right! Try the Streamlit App: [Food101](https://choosealicense.com/licenses/mit/)
+Hungry Right! Try the Streamlit App: [Food101](https://saks0106-food101multiclassclassification-app-k4q9ai.streamlit.app/)
 
 ## Project Description:
 
