@@ -4,13 +4,18 @@ import streamlit as st
 from util import load_and_prep_image
 import time
 import tensorflow as tf
+import tensorflow_hub as hub
+
 
 
 
 class Model:
 
     def __init__(self):
-        self.model = load_model('./model/efficientnet_v2_new.h5')
+        path = './model/efficientnet_v2_new.h5'
+        self.model = tf.keras.models.load_model((path),
+            custom_objects={'KerasLayer': hub.KerasLayer}
+        )
 
     def image_display(self, file):
         try:
