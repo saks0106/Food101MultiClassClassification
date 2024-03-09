@@ -88,11 +88,15 @@
 
 
 import streamlit as st
-from cnn_model import Model
+#from cnn_model import Model
 import os
 import requests
 from PIL import Image
 from io import BytesIO
+from keras.models import load_model
+from util import load_and_prep_image
+import tensorflow as tf
+import time
 
 st.set_page_config(page_title='Food101',
                    page_icon='🍚',
@@ -114,11 +118,31 @@ st.warning('Please wait Patiently while the model :robot_face: while the model w
 img_select = st.radio('Select Any from Below Options:',
                   options =('Upload an Image', 'Choose from Existing Images','Paste a Link'))
 
-model = Model()
+#model = Model()
 
 if img_select == 'Upload an Image':
     file = st.file_uploader('', type=['jpeg', 'jpg', 'png'])
-    model.image_display(file)
+    model = load_model('./model/efficientnet_v2_new.h5')
+    if file is not None:
+        image = Image.open(file).convert('RGB')
+        st.markdown(f'<h2>Image Uploaded! Scroll below the Image to get Classification Results!</h2>',
+                    unsafe_allow_html=True)
+
+        st.image(image, width=900)
+        with open('labels.txt', 'r') as f:
+            class_names = [a.rstrip() for a in f.readlines()]
+            f.close()
+        img = load_and_prep_image(image, scale=False)
+        pred_prob = model.predict(tf.expand_dims(img, axis=0))  # make prediction on image with shape [None, 224, 224, 3]
+        pred_class = class_names[pred_prob.argmax()]  # find the predicted class label with highest probability
+        st.write('#')
+        pred_prob = pred_prob.max() * 100
+        st.write(f"# Model Thinks the Dish is {pred_class} 🍲 with Confidence level of {pred_prob:.2f}% 😋😄 ")
+        st.markdown('#')
+        time.sleep(0.5)
+        st.balloons()
+        time.sleep(0.9)
+        st.snow()
 #
 # elif img_select == 'Choose from Existing Images':
 #     folder_dir = "./images/"
