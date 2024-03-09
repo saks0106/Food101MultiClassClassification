@@ -4,6 +4,11 @@ import streamlit as st
 from util import load_and_prep_image
 import time
 import tensorflow as tf
+from keras.utils import get_custom_objects
+
+# Assuming RandomHeight is a custom layer or function
+get_custom_objects().update({'RandomHeight': RandomHeight})
+
 
 
 
