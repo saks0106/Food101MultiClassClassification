@@ -10,7 +10,7 @@ import tensorflow as tf
 class Model:
 
     def __init__(self):
-        self.model = load_model('./model/efficientnet_v2.h5')
+        self.model = load_model('./model/efficientnet_v2_new.h5')
 
     def image_display(self, file):
         if file is not None:
